@@ -28,7 +28,8 @@ let hello = "Hola, mi nombre es: " + name + " " + lastName;
 console.log(hello);
 
 //Método 2 (RECOMENDADA)
-let helloTwo = `Hola, mi nombre es ${name} ${lastName}`
+let helloTwo = `Hola, mi nombre es ${name} y mi apellido es ${lastName}`;
+console.log(helloTwo);
 
 //Método 3
 let longString2 =
