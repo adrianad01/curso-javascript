@@ -51,3 +51,22 @@ console.log("Comentario original:", comentarioOriginal);
 console.log("Comentario con espacios reemplazados:", comentarioReemplazado);
 
 
+/* Crea una función llamada numeroMayor() que toma tres números como entrada
+ y retornar el numero mayor de ellos, si son iguales devolver un String «son iguales».*/
+
+const numeroMayor = function() {
+    let numero1 = window.prompt("Ingrese el primer número")
+    let numero2 = window.prompt("Ingrese el segundo número")
+    let numero3 = window.prompt("Ingrese el tercer número")
+
+    if (numero1 > numero2 && numero1 > numero3) {
+        console.log(`El número mayor es el ${numero1}`)
+    } else if (numero1 < numero2 && numero2 > numero3) {
+        console.log(`El número mayor es el ${numero2}`)
+    } else if (numero1 < numero3  && numero2 < numero3) {
+        console.log(`El número mayor es el ${numero3}`)
+    } else  {
+        console.log("Son iguales")
+    } 
+}
+numeroMayor();
