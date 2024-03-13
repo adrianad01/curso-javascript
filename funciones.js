@@ -28,7 +28,7 @@ saludar("Adrián", 22);
 // ----------------------------------------------------//
 
 
-//Funciones declaradas vs funciones declaradas
+//Funciones declaradas vs funciones expresada
 funcionDeclarada();
 function funcionDeclarada() {
   console.log(
