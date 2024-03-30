@@ -1,0 +1,8 @@
+{
+  "cadena": "Adrián",
+  "numero": 35,
+  "booleano": true,
+  "arreglo": ["Programar", "Jugar", "Estudiar"],
+  "objeto": { "email": "jadrianaldo@outlook.com", "telefono": "8186580644" },
+  "nulo": null
+}
