@@ -1,4 +1,4 @@
-const $figure = document.createElement("figure"),
+ const $figure = document.createElement("figure"),
   $image = document.createElement("img"),
   $figcaption = document.createElement("figcaption"),
   $figcaptionText = document.createTextNode("Animals"),
