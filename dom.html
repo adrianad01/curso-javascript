@@ -4,6 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEB APIs</title>
+    <style>
+      :root {
+        --yellow-color: #f7df1e;
+        --dark-color: #222222;
+      }
+      .card {
+        display: inline-block;
+        background-color: var(--dark-color);
+        color: var(--yellow-color);
+      }
+      .card figcaption {
+        padding: 1rem;
+      }
+      .rotate-45 {
+        transform: rotate(45deg);
+      }
+      .rotate-135 {
+        transform: rotate(135deg);
+      }
+      .opacity-80 {
+        opacity: 0.8;
+      }
+      .sepia {
+        filter: sepia(1);
+      }
+      .cards{
+        border: thin solid var(--dark-color);
+        padding: 1rem;
+      }
+    </style>
   </head>
 
   <h1>WEB APIs</h1>
@@ -51,7 +81,14 @@
   </nav>
 
   <input type="text" name="nombre" placeholder="Nombre" />
-  <a class="link-dom" href="dom.html" data-description="Document Object Model">DOM</a>
+  <a
+    class="link-dom"
+    href="dom.html"
+    style="background-color: #f7df1e; color: #222222"
+    data-id="1"
+    data-description="Document Object Model"
+    >DOM</a
+  >
   <section class="cards">
     <figure class="card">
       <img src="https://placeimg.com/200/200/tech" alt="Tech" />

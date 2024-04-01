@@ -18,6 +18,10 @@ console.log(document.querySelector("a"));
 
 // 7. Imprime en la consola todos los enlaces (<a>) del documento.
 console.log(document.querySelectorAll("a"));
+console.log(document.querySelectorAll("a").length);
+
+//Imprime todos elementos a en la consola del navegador
+document.querySelectorAll("a").forEach((element) => console.log(element));
 
 // 8. Imprime en la consola el primer elemento con la clase "card" utilizando un selector de CSS.
 console.log(document.querySelector(".card"));
