@@ -9,7 +9,7 @@
         --yellow-color: #f7df1e;
         --dark-color: #222222;
       }
-      .cards{
+      .cards {
         border: thin solid var(--dark-color);
         padding: 1rem;
       }
@@ -33,7 +33,20 @@
       .sepia {
         filter: sepia(1);
       }
-
+      .eventos-flujo div {
+        padding: 4rem;
+        font-size: 2rem;
+        text-align: center;
+      }
+      .uno {
+        background-color: yellow;
+      }
+      .dos {
+        background-color: gold;
+      }
+      .tres {
+        background: lightyellow;
+      }
     </style>
   </head>
 
@@ -114,10 +127,35 @@
   </section>
   <template id="template-card">
     <figure class="card">
-      <img>
+      <img />
       <figcaption></figcaption>
     </figure>
   </template>
-  <script src="DOM/elementosCS.js"></script>
+  <h3>Eventos en JS</h3>
+  <h4>Manejadores de Eventos</h4>
+  <!-- Mala Práctica -->
+  <button onclick="holaMundo()">Evento con atributo html</button>
+  <br /><br />
+  <!-- Mejor Práctica -->
+  <button id="evento-semantico">Evento con manejador semántico</button>
+  <br /><br />
+  <!-- Evento Múltiple -->
+  <button id="evento-multiple">Evento con manejador múltiple</button
+  ><br /><br />
+  <button id="evento-remover">Removiendo evento con manejador múltiple</button>
+  <br /><br /><br /><br /><br />
+  <section class="eventos-flujo">
+    <div class="uno">
+      1
+      <div class="dos">
+        2
+        <div class="tres">
+          3
+          <a href="https://jonmircha.com/" target="_blank" rel="noopener">jonmircha.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="DOM/bom.js"></script>
   <body></body>
 </html>
