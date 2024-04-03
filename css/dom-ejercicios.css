@@ -1,114 +1,129 @@
 /* Reset CSS */
 
+/* Define variables CSS personalizadas */
 :root {
-  --main-font: sans-serif;
-  --font-size: 16px;
-  --main-color: #f7df1e;
-  --second-color: #222;
-  --main-modal-color: rgba(247, 222, 30, 0.85);
-  --second-modal-color: rgba(34, 34, 34, 0.85);
-  --container-width: 1200px;
+  --main-font: sans-serif; /* Fuente principal para el sitio web */
+  --font-size: 16px; /* Tamaño de fuente base */
+  --main-color: #f7df1e; /* Color principal utilizado */
+  --second-color: #222; /* Color secundario utilizado */
+  --main-modal-color: rgba(247, 222, 30, 0.85); /* Color principal para el modal con transparencia */
+  --second-modal-color: rgba(34, 34, 34, 0.85); /* Color secundario para el modal con transparencia */
+  --container-width: 1200px; /* Ancho máximo del contenedor de contenido */
 }
 
+/* Estilos básicos para los elementos HTML */
 html {
-  box-sizing: border-box;
-  font-family: var(--main-font);
-  font-size: var(--font-size);
-  scroll-behavior: smooth;
+  box-sizing: border-box; /* Incluir relleno y borde en el ancho y alto total del elemento */
+  font-family: var(--main-font); /* Establecer la familia de fuentes */
+  font-size: var(--font-size); /* Establecer el tamaño de fuente */
+  scroll-behavior: smooth; /* Comportamiento de desplazamiento suave */
 }
 
+/* Heredar el modelo de caja de los elementos hijos */
 *,
 *:after,
 *:before {
   box-sizing: inherit;
 }
+
+/* Estilos para el cuerpo del sitio */
 body {
-  margin: 0;
-  overflow-x: hidden;
+  margin: 0; /* Eliminar márgenes predeterminados */
+  overflow-x: hidden; /* Ocultar la barra de desplazamiento horizontal */
 }
 
+/* Estilos para las imágenes */
 img {
-  max-width: 100%;
+  max-width: 100%; /* Hacer que las imágenes sean responsivas */
   height: auto;
 }
 
-/* Menú Hamburguesa */
+/* Estilos para el encabezado */
 .header {
-  position: sticky;
-  top: 0;
-  padding: 1rem;
-  background-color: var(--main-color);
-  color: var(--second-color);
+  position: sticky; /* Hacer que el encabezado se pegue en la parte superior */
+  top: 0; /* Fijar en la parte superior */
+  padding: 1rem; /* Agregar relleno */
+  background-color: var(--main-color); /* Color de fondo */
+  color: var(--second-color); /* Color de texto */
 }
 
-.header h1{
-    margin: 0 auto;
-    text-align: center;
+/* Estilos para el encabezado h1 */
+.header h1 {
+  margin: 0 auto; /* Centrar horizontalmente */
+  text-align: center; /* Alinear al centro */
 }
 
-.section{
-    padding: 2rem;
-    padding-top: 4rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: var(--container-width);
-    min-height: 100vh;
-    text-align: center;
-
+/* Estilos para las secciones */
+.section {
+  padding: 2rem; /* Agregar relleno */
+  padding-top: 4rem; /* Agregar relleno superior */
+  margin-left: auto; /* Centrar horizontalmente */
+  margin-right: auto; /* Centrar horizontalmente */
+  width: 100%; /* Ancho completo */
+  max-width: var(--container-width); /* Ancho máximo */
+  min-height: 100vh; /* Altura mínima de la pantalla */
+  text-align: center; /* Alinear al centro */
 }
 
-.panel{
-    position: fixed;
-    z-index: 998;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--second-modal-color);
-    transition: transform .3s ease;
-    transform: translate(0,-100%);
+/* Estilos para el panel */
+.panel {
+  position: fixed; /* Fijar posición */
+  z-index: 998; /* Índice z para superposición */
+  width: 100%; /* Ancho completo */
+  top: 0; /* Fijar en la parte superior */
+  bottom: 0; /* Fijar en la parte inferior */
+  left: 0; /* Fijar en la parte izquierda */
+  right: 0; /* Fijar en la parte derecha */
+  background-color: var(--second-modal-color); /* Color de fondo */
+  transition: transform 0.3s ease; /* Transición de animación */
+  transform: translate(0, -100%); /* Desplazar fuera de la pantalla */
 }
 
-.panel.is-active{
-    transform: translate(0,0);
+/* Estilos para el panel activo */
+.panel.is-active {
+  transform: translate(0, 0); /* Desplazar hacia la pantalla */
 }
 
-.panel-btn{
-    position: fixed;
-    z-index: 999;
-    bottom: 1vh;
-    right: 1vw;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-color) !important;
+/* Estilos para el botón del panel */
+.panel-btn {
+  position: fixed; /* Fijar posición */
+  z-index: 999; /* Índice z para superposición */
+  bottom: 1vh; /* Fijar en la parte inferior */
+  right: 1vw; /* Fijar en la parte derecha */
+  width: 4rem; /* Ancho */
+  height: 4rem; /* Altura */
+  border-radius: 50%; /* Borde redondeado */
+  padding: 0; /* Sin relleno */
+  display: flex; /* Mostrar como flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  background-color: var(--main-color) !important; /* Color de fondo */
 }
 
-.menu{
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
+/* Estilos para el menú */
+.menu {
+  width: inherit; /* Heredar ancho */
+  display: flex; /* Mostrar como flexbox */
+  flex-direction: column; /* Apilar elementos verticalmente */
+  justify-content: space-evenly; /* Distribuir uniformemente los elementos */
+  align-items: center; /* Centrar horizontalmente */
+  text-align: center; /* Alinear al centro */
 }
-.menu a{
-    padding: 2rem;
-    width: inherit;
-    display: block;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: var(--main-color);
-    transition: all 0.3s ease;
+
+/* Estilos para los enlaces del menú */
+.menu a {
+  padding: 2rem; /* Agregar relleno */
+  width: inherit; /* Heredar ancho */
+  display: block; /* Mostrar como bloque */
+  font-size: 1.5rem; /* Tamaño de fuente */
+  text-decoration: none; /* Sin subrayado */
+  color: var(--main-color); /* Color de texto */
+  transition: all 0.3s ease; /* Transición de animación */
 }
-.menu a:hover{
-    font-weight: bold;
-    color: var(--second-color);
-    background-color: var(--main-modal-color);
+
+/* Estilos para los enlaces del menú al pasar el cursor */
+.menu a:hover {
+  font-weight: bold; /* Texto en negrita */
+  color: var(--second-color); /* Color de texto */
+  background-color: var(--main-modal-color); /* Color de fondo */
 }
