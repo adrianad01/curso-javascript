@@ -14,6 +14,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   hamburguerMenu(".panel-btn", ".panel", ".menu a");
   digitalClock("#reloj", "#activar-reloj", "#desactivar-reloj");
   countdown("countdown", "May 3, 2024 00:00:00", "Feliz Cumpleaños amigo");
-  scrollTopButton(".scroll-top-btn")
-  darkTheme(".dark-theme-btn", "dark-mode")
+  scrollTopButton(".scroll-top-btn");
 });
+
+darkTheme(".dark-theme-btn", "dark-mode");
