@@ -1,104 +1,73 @@
 //1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
-console.log("*****Ejercicio 1*****");
-const miFuncion1 = function (cadena) {
-  console.log(cadena.length);
+const miFuncionUno = (cadenaTexto) => {
+  let resultado = cadenaTexto;
+  return console.log(resultado.length);
 };
-miFuncion1("Esto es una cadena");
-
+miFuncionUno("Hola Mundo");
 //2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
-console.log("*****Ejercicio 2*****");
-const miFuncion2 = (cadena2 = "", longitud = undefined) =>
-  !cadena2
-    ? console.warn("No ingresaste una cadena de texto")
-    : console.info(cadena2.slice(0, longitud));
-miFuncion2("Hola Mundo", 7);
+const miFuncionDos = (texto) => {};
 
 //3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
-console.log("*****Ejercicio 3*****");
-const miFuncion3 = function (texto, caracter) {
-  return texto.split(caracter);
-};
-console.log(miFuncion3("Hola que tal", " "));
 
 //4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
-console.log("*****Ejercicio 4*****");
-const miFuncion4 = function (texto, veces) {
+const miFuncionCuatro = (cadena, cantidad) => {
   let resultado = "";
-  for (let i = 0; i < veces; i++) {
-    resultado += texto + " ";
+  for (let i = 0; i < cantidad; i++) {
+    resultado += cadena + " "; // Concatenamos la cadena y un espacio en blanco
   }
-  return resultado.trim(); // Eliminar espacio adicional al final
+  console.log(resultado.trim()); // Imprimimos el resultado final, eliminando espacios adicionales
 };
-console.log(miFuncion4("Hola Mundos", 5)); // Salida: Hola Mundo Hola Mundo Hola Mundo
+
+miFuncionCuatro("Javascript", 3); // Salida: "Javascript Javascript Javascript"
+
 
 // 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
-console.log("*****Ejercicio 5*****");
-const miFuncion5 = function (texto) {
-  return texto.split("").reverse().join("");
-};
-console.log(miFuncion5("Cruz Azul"));
+
 // 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
-console.log("*****Ejercicio 6*****");
-const miFuncion6 = function (texto2, veces2) {};
-console.log(miFuncion6("Hola Mundo Adios Mundo", "Mundo"));
 
 // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
-console.log("*****Ejercicio 7*****");
-// 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
-console.log("*****Ejercicio 8*****");
+
 // 9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
-console.log("*****Ejercicio 9*****");
-const miFuncion9 = function (min, max) {
-  return Math.round(Math.random() * (max - min) + min);
+const miFuncionNueve = (min, max) => {
+  return console.log(Math.round(Math.random() * (max - min) + min));
 };
-console.log(miFuncion9(501, 600));
+miFuncionNueve(501, 600);
 // 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
 // 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
 
 // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
-console.log("*****Ejercicio 12******");
-
-const miFuncion12 = function (numero) {
-  if (numero <= 1) {
-    return false; // 0 y 1 no son considerados primos
-  }
-  for (let i = 2; i <= Math.sqrt(numero); i++) {
-    if (numero % i === 0) {
-      return false; // Si es divisible por algún número, no es primo
-    }
-  }
-  return true; // Si no se ha encontrado ningún divisor, es primo
-};
-
-console.log(miFuncion12(7)); // Salida: true
 
 // 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
-console.log("*****Ejercicio 13******");
-const miFuncion13 = function (numero) {
-  if (numero % 2 == 0) {
-    console.log("Es par");
-  } else {
-    console.log("Es impar");
-  }
+const miFuncionTrece = (numero) => {
+  numero % 2 == 0
+    ? console.log(`El número ${numero} es un número par.`)
+    : console.log(`El número ${numero} es un número impar.`);
 };
-miFuncion13(29);
+miFuncionTrece(26);
+
 // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
-console.log("*****Ejercicio 14******");
-const miFuncion14 = function (gradosCelcius) {
-  // gF = (C*1.8)+32
-  let gradosFahrenheit = gradosCelcius * 1.8 + 32;
-  console.log(gradosFahrenheit);
+const miFuncionCatorce = (gradosCelsius, gradosFahrenheit) => {
+  gradosFahrenheit = gradosCelsius * 1.8 + 32;
+  gradosCelsius = (gradosFahrenheit - 32) * 0.555;
+  console.log(
+    `${gradosCelsius}º grados Celsius equivale a ${gradosFahrenheit}º grados Fahrenheit`
+  );
+  console.log(
+    `${gradosFahrenheit}º grados Fahrenheit equivale a ${gradosCelsius}º grados Celsius`
+  );
 };
-miFuncion14(45);
+miFuncionCatorce(0, 32);
+
 // 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
 // 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
-console.log("*****Ejercicio 16******");
-const miFuncion16 = function (precioTotal, descuento) {
-  precioFinal = precioTotal - precioTotal * (descuento / 100);
-  console.log(precioFinal);
+const miFuncionDieciseis = (precioProducto, descuentoProducto) => {
+  let precioFinal = precioProducto - precioProducto * (descuentoProducto / 100);
+  return console.log(precioFinal);
 };
-miFuncion16(1000, 25);
+miFuncionDieciseis(1000, 40);
 // 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+
+const miFuncionDiecisiete = (fecha) => {};
 // 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
 // 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
 // 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
@@ -108,20 +77,6 @@ miFuncion16(1000, 25);
 // 24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
 // 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
 // 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.27)
-console.log("*****Ejercicio 26******");
-console.log("*****Ejercicio 26******");
-
-const miFuncion26 = function (arreglo) {
-  let suma = 0;
-  for (let i = 0; i < arreglo.length; i++) {
-    suma += arreglo[i];
-  }
-  let promedio = suma / arreglo.length;
-  console.log(promedio);
-};
-
-miFuncion26([10, 10, 10, 10]); // Salida: 10
-
 
 /* Programa una clase llamada Pelicula.
 La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.

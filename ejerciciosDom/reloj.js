@@ -27,4 +27,3 @@ export function digitalClock(clock, btnPlay, btnStop) {
 
 // Exporta una función llamada "alarm", actualmente vacía
 export function alarm() {}
-

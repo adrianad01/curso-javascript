@@ -6,8 +6,18 @@
   --font-size: 16px; /* Tamaño de fuente base */
   --main-color: #f7df1e; /* Color principal utilizado */
   --second-color: #222; /* Color secundario utilizado */
-  --main-modal-color: rgba(247, 222, 30, 0.85); /* Color principal para el modal con transparencia */
-  --second-modal-color: rgba(34, 34, 34, 0.85); /* Color secundario para el modal con transparencia */
+  --main-modal-color: rgba(
+    247,
+    222,
+    30,
+    0.85
+  ); /* Color principal para el modal con transparencia */
+  --second-modal-color: rgba(
+    34,
+    34,
+    34,
+    0.85
+  ); /* Color secundario para el modal con transparencia */
   --container-width: 1200px; /* Ancho máximo del contenedor de contenido */
 }
 
@@ -126,4 +136,32 @@ img {
   font-weight: bold; /* Texto en negrita */
   color: var(--second-color); /* Color de texto */
   background-color: var(--main-modal-color); /* Color de fondo */
+}
+
+/* Botón Scroll */
+
+.scroll-top-btn {
+  position: fixed; /* Fijar posición */
+  z-index: 999; /* Índice z para superposición */
+  bottom: 1vh; /* Fijar en la parte inferior */
+  right: calc(4.25rem + 1vw); /* Fijar en la parte derecha */
+  width: 4rem; /* Ancho */
+  height: 4rem; /* Altura */
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease;
+}
+.scroll-top-btn:hover{
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+.hidden{
+  visibility: hidden;
+  opacity: 0;
 }
