@@ -3,6 +3,7 @@ import scrollTopButton from "./boton_scroll.js";
 import countdown from "./cuenta_regresiva.js";
 import hamburguerMenu from "./menu_hamburguesa.js";
 import { digitalClock, alarm } from "./reloj.js";
+import darkTheme from "./tema_oscuro.js";
 
 // Obtiene el documento actual y lo asigna a la variable d
 const d = document;
@@ -14,4 +15,5 @@ d.addEventListener("DOMContentLoaded", (e) => {
   digitalClock("#reloj", "#activar-reloj", "#desactivar-reloj");
   countdown("countdown", "May 3, 2024 00:00:00", "Feliz Cumpleaños amigo");
   scrollTopButton(".scroll-top-btn")
+  darkTheme(".dark-theme-btn", "dark-mode")
 });
