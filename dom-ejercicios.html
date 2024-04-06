@@ -26,18 +26,16 @@
     <aside class="panel">
       <nav class="menu">
         <a href="#seccion1">Ejercicio 1: Reloj Digital y Alarma Sonora</a>
-        <a href="#seccion2">Sección 2</a>
+        <a href="#seccion2"></a>
         <a href="#seccion3">Cuenta Regresiva</a>
-        <a href="#seccion4">Sección 4</a>
-        <a href="#seccion5">Sección 5</a>
+        <a href="#seccion4">Responsive JS</a>
+        <a href="#seccion5">Validación de Formulario</a>
       </nav>
     </aside>
     <main>
       <section id="seccion1" class="section">
         <h2>Reloj Digital y Alarma Sonora</h2>
-        <div id="reloj">
-
-        </div>
+        <div id="reloj"></div>
         <div>
           <button id="activar-reloj">Iniciar Reloj</button>
           <button id="desactivar-reloj">Detener Reloj</button>
@@ -47,7 +45,6 @@
       </section>
       <section id="seccion2" class="section">
         <h2>Sección 2</h2>
-        
       </section>
       <section id="seccion3" class="section">
         <h2>Cuenta Regresiva</h2>
@@ -57,11 +54,53 @@
         <h2>Sección 4</h2>
       </section>
       <section id="seccion5" class="section">
-        <h2>Sección 5</h2>
+        <h2>Validación de Formulario</h2>
+        <form class="contact-form">
+          <legend>Envianos tus comentarios</legend>
+          <input
+            type="text"
+            name="name"
+            placeholder="Escribe tu nombre"
+            title="El nombre solo acepta letras y espacios en blanco"
+            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Escribe tu correo electrónico"
+            title="Email invalido"
+            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+            required
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Asunto a tratar"
+            title="El asunto es requerido"
+            required
+          />
+          <textarea
+            name="comments"
+            cols="50"
+            rows="5"
+            placeholder="Escibe tus comentarios"
+            data-pattern="^.{1,255}$"
+            title="Tu comentario no debe exceder los 255 caracteres"
+            required
+          ></textarea>
+          <input type="submit" value="Enviar" />
+          <div class="contact-form-loader none">
+            <img src="assets/tail-spin.svg" alt="cargando" />
+          </div>
+          <div class="contact-form-response none">
+            <p>Los datos han sido enviados</p>
+          </div>
+        </form>
       </section>
     </main>
     <button class="scroll-top-btn hidden">&#11014;</button>
-    <button class="dark-theme-btn"></button>
+    <button class="dark-theme-btn">🌙</button>
     <script src="ejerciciosDom/index_dom.js" type="module"></script>
   </body>
 </html>
