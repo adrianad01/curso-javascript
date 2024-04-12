@@ -1,0 +1,56 @@
+{
+  "datos_usuarios": [
+    {
+      "id": "1",
+      "nombre": "Jóse Manuel",
+      "apellido": "Marquez"
+    },
+    {
+      "id": "2",
+      "nombre": "Jóse Manuel",
+      "apellido": "Osorio"
+    },
+    {
+      "id": "3",
+      "nombre": "Jesús Adrián",
+      "apellido": "Alcocer Dóñez"
+    },
+    {
+      "id": "5",
+      "nombre": "Sergio Michelle",
+      "apellido": "Péres Mendoza"
+    },
+    {
+      "id": "6",
+      "nombre": "Miguel",
+      "apellido": "Garza"
+    }
+  ],
+  "puestos_usuarios": [
+    {
+      "id": "1",
+      "puesto": "Desarrollador Jr.",
+      "direccion": "TI"
+    },
+    {
+      "id": "2",
+      "puesto": "Desarrollador Sr.",
+      "direccion": "TI"
+    },
+    {
+      "id": "3",
+      "puesto": "Analista de Proyectos",
+      "direccion": "TI"
+    },
+    {
+      "id": "4",
+      "puesto": "Analista Financiero",
+      "direccion": "Finanzas"
+    },
+    {
+      "id": "5",
+      "puesto": "Director de Mercadotecnia",
+      "direccion": "Marketing"
+    }
+  ]
+}
